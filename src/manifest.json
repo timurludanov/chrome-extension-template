@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "__MSG_extName__",
+  "short_name": "__MSG_extShortName__",
+  "version": "1.0.0",
+  "description": "__MSG_extDescription__",
+  "default_locale": "en",
+  "icons": {
+    "16": "assets/icons/16.png",
+    "48": "assets/icons/48.png",
+    "64": "assets/icons/64.png",
+    "128": "assets/icons/128.png"
+  },
+  "background": {
+    "service_worker": "scripts/background.bundle.js"
+  },
+  "action": {
+    "default_title": "__MSG_tipBrowserAction__",
+    "default_icon": "assets/icons/16.png",
+    "default_popup": "popup.html"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "content_scripts": [
+    {
+      "all_frames": true,
+      "matches": ["*://*/*"],
+      "run_at": "document_end",
+      "js": ["scripts/content.bundle.js"]
+    }
+  ],
+  "minimum_chrome_version": "64",
+  "permissions": ["tabs"]
+}

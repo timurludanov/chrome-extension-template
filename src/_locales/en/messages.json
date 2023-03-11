@@ -1,0 +1,6 @@
+{
+  "extName": { "message": "Chrome extension template" },
+  "extShortName": { "message": "Chrome ext template" },
+  "extDescription": { "message": "Chrome extension describe" },
+  "tipBrowserAction": { "message": "Chrome extension template" }
+}
